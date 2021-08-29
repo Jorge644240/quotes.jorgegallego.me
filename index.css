@@ -5,7 +5,7 @@ body
 section
 {
     height: 100vh;
-    background-image: -webkit-linear-gradient(top, #4444BB, #000000, #4444BB);
+    background-image: -webkit-linear-gradient(top, #4444BB, #111111, #000000, #111111, #4444BB);
 }
 h1
 {
