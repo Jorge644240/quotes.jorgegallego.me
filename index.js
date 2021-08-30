@@ -4,7 +4,11 @@ const generateQuote = () => {
         return response.json();
     })
     .then(data => {
-        const quote = data.content, author = data.author;
+        const quote = "\"".concat(data.content), author = data.author;
+        if (document.querySelector(".quote blockquote").innerHTML != "") {
+            document.querySelector(".quote blockquote").innerHTML = "";
+            document.querySelector(".quote p").innerHTML = "";
+        }
         let i = 0;
         const title = () => {
             if (i < quote.length) {
@@ -22,3 +26,5 @@ const generateQuote = () => {
 }
 
 window.onload = generateQuote;
+
+document.querySelector("button").addEventListener("click", generateQuote);
